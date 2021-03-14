@@ -35,10 +35,6 @@ describe("Users", () => {
         await connection.runMigrations();
     })
 
-    afterAll(async () => {
-
-    })
-
     it("should be able to create a user", async () => {
         const response = await request(app)
         .post("/users")
