@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 import User from '../models/user';
 import bcrybt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+import generateJWT from '../utils/generateAuthToken';
 
 class AuthController {
     async authenticate(request: Request, response: Response) {
@@ -25,7 +25,7 @@ class AuthController {
             })
         }
 
-        const token = jwt.sign({ id: user.id }, process.env.PRIVATE_KEY, { expiresIn: '1d' })
+        const token = generateJWT(user.id);
 
         delete user.password;
 

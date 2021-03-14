@@ -13,5 +13,6 @@ export default {
     ],
     "cli": {
         "migrationsDir": "./src/database/migrations"
-    }
+    },
+    "dropSchema": process.env.NODE_ENV == 'test' ? true : false
 }
