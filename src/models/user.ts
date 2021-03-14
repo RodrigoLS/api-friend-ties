@@ -3,7 +3,7 @@ import bcrybt from 'bcrypt';
 
 @Entity('users')
 class User {
-    @PrimaryColumn()
+    @PrimaryColumn("int")
     id: number;
 
     @Column()
