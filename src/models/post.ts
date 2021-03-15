@@ -1,9 +1,7 @@
 import { Column, Entity, PrimaryColumn, Timestamp } from "typeorm";
 
-
-
 @Entity("posts")
-class Posts {
+class Post {
     @PrimaryColumn("int")
     id: number;
 
@@ -22,3 +20,5 @@ class Posts {
     @Column("timestamp")
     createdAt: Date;
 }
+
+export default Post;
