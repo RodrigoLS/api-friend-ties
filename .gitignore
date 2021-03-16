@@ -74,6 +74,3 @@ typings/
 
 # FuseBox cache
 .fusebox/
-
-#Firebase admin SDK key
-/api-friend-ties/src/services/storage/*.json
