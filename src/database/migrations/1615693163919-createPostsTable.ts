@@ -33,6 +33,10 @@ export class createPostsTable1615693163919 implements MigrationInterface {
                         type: "varchar"
                     },
                     {
+                        name: "fileName",
+                        type: "varchar"
+                    },
+                    {
                         name: "createdAt",
                         type: "timestamp",
                     }

@@ -17,6 +17,9 @@ class Post {
     @Column()
     type: string;
 
+    @Column()
+    fileName: string;
+
     @Column("timestamp")
     createdAt: Date;
 }
